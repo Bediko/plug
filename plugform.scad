@@ -18,13 +18,23 @@ module plug(r,h){
 		}
 	
 		
-		translate([0,0,-((1/3)*h)-21.8]) cylinder(r=r*0.5,h=25, $fn=100);
-		translate([0,0,-((1/3)*h)-26.8]) rcylinder(r1=r,r2=r,h=10, $fn=100);
+		translate([0,0,-((1/3)*h)-36.8]) cylinder(r=r*0.5,h=40, $fn=100);
+		translate([0,0,-((1/3)*h)-41.8]) rcylinder(r1=r,r2=r,h=10, $fn=100);
 	
 	}
 
 
 }
+
+
+module negative(d,h){
+
+	difference(){
+	cube(size=[d,d,h]);
+	plug(d,h);
+	}
+}
+
 d=35;
 h=100;
 plug(d,h);
