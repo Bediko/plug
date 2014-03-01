@@ -5,14 +5,14 @@ top=0;
 bottom=0;
 module plug(r,h){
 		union(){	
-		translate([0,0,+1.4]){
+		translate([0,0,2.]){
 			cylinder(r1=r+0.1,r2=5,h=(3/4)*h,$fn=100);
 		}
 		translate([0,0,((3/4)*h)+0.4]){
 			sphere(5.1,$fn=100,center=true);
 		}
 		translate([0,0,0]) rcylinder(h=5,r1=r,r2=r,$fn=100,cent);	
-		translate([0,0,-((1/3)*h)-10.0]){
+		translate([0,0,-((1/3)*h)-9.2]){
 			cylinder(r2=r+0.1,r1=r*0.3,h=(3/7)*h,$fn=100);
 		}	
 		translate([0,0,-((1/3)*h)-36.8]) cylinder(r=r*0.5,h=40, $fn=100);
